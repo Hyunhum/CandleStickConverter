@@ -97,7 +97,7 @@ public class CandleStickConverter {
                 }
                 // 최종까지 했을 경우 break
                 if (i == arr.length - 1) {break;}
-                // start, openIndex, high, low를 다음 차례에 맞게 증가시켜줍니다
+                // start, openIndex 다음 차례에 맞게 증가시켜주고, high, low를 다음 차례의 가격으로 초기화합니다.
                 start += period;
                 openIndex = i+1;
                 high = low = arr[openIndex].getPrice();
