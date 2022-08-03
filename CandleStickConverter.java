@@ -104,7 +104,6 @@ public class CandleStickConverter {
                 /* 
                     case3. open, close 등에서 null값을 가진 아웃풋 candleStick을 넣어줍니다.
                     아웃풋 캔들스틱에 인풋이 포함되는 직전까지 별개의 중첩 loop를 돕니다(성능저하... 최적화해야할 필요성...).
-                    그럼에도 시간복잡도는 아웃풋 크기와 O(N)입니다.
                 */
                 if (start > arr[i].getTimestamp()
                 && start + period - 1 < arr[i+1].getTimestamp()) {
